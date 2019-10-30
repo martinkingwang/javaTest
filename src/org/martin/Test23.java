@@ -23,9 +23,10 @@ class Test23 implements ITest{
         StringBuilder sb = new StringBuilder();
         ListNode temp = node;
         while(temp.next != null){
-            sb.append(node.val + "->");
+            sb.append(temp.val + "->");
             temp = temp.next;
         }
+        sb.append(temp.val);
         return sb.toString();
     }
 }

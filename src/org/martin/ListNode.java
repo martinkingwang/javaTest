@@ -6,4 +6,9 @@ public class ListNode {
 	public ListNode(int v) {
 		this.val = v;
 	}
+
+	@Override
+	public String toString(){
+		return Integer.toString(val);
+	}
 }
