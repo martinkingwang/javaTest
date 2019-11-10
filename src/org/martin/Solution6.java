@@ -53,4 +53,21 @@ class Solution6 {
         }
         return str;
     }
+
+    public String convert2(String s, int numRows){
+        if(numRows <= 1)
+            return s;
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < numRows; i ++){
+            for(int j = 0; j * 2 * (numRows - 1) + i< s.length(); j ++){
+                int count = j * 2 * (numRows - 1) + i;
+                sb.append(s.charAt(count));
+                int count2 = (j + 1) * 2 * (numRows - 1) - i;
+                if(count2 < s.length() && count2 != count && (count2 - count) % (2 * (numRows - 1)) != 0){
+                    sb.append(s.charAt(count2));
+                }
+            }
+        }
+        return sb.toString();
+    }
 }
