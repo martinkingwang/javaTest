@@ -24,7 +24,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		try {
-			Class clazz = Class.forName("org.martin.Test44");
+			Class clazz = Class.forName("org.martin.Test15");
 			Method method = clazz.getDeclaredMethod("run", null);
 			method.invoke(clazz.newInstance(), null);
 		} catch (ClassNotFoundException e) {

@@ -8,8 +8,8 @@ class Test44 implements ITest{
     public void run() {
         Solution44 solution = new Solution44();
         long start = System.currentTimeMillis();
-        System.out.println(solution.isMatch("bbbbbbbabbaabbabbbbaaabbabbabaaabbababbbabbbabaaabaab",
-        "b*b*ab**ba*b**b***bba"));
+        System.out.println(solution.isMatch("aa",
+        "a"));
         System.out.println(System.currentTimeMillis() - start);
     }
 

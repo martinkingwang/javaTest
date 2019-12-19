@@ -15,7 +15,7 @@ class Test23 implements ITest{
         nodes[1] = node2;
 
         Solution23 solution = new Solution23();
-        ListNode node = solution.mergeKLists(nodes);
+        ListNode node = solution.mergeKLists2(nodes);
         System.out.println(printListNode(node));
     }
 
