@@ -3,18 +3,28 @@ package org.martin;
 class Solution19{
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode node = head;
-        int count = 0;
-        while(node != null){
-            count ++;
-            node = node.next;
-        }
-        node = head;
+        ListNode toDel = null;
         ListNode previous = null;
-        for(int i = 0; i < count- n; i ++){
-            previous = node;
+        int count = 1;
+        while(node != null){
+            if(count >= n){
+                if(toDel == null){
+                    toDel = head;
+                }
+                else{
+                    previous = toDel;
+                    toDel = toDel.next;
+                }
+            }
             node = node.next;
+            count ++;
         }
-        previous.next = node.next;
-        return head;
+        if(previous == null){
+            return head.next;
+        }
+        else{
+            previous.next = toDel.next;
+            return head;
+        }
     }
 }

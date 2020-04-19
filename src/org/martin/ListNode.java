@@ -13,6 +13,9 @@ public class ListNode {
 	}
 
 	public static ListNode build(int[] vals){
+		if(vals.length == 0){
+			return null;
+		}
 		ListNode root = new ListNode(vals[0]);
 		ListNode temp = null;
 		for(int i = 1; i < vals.length; i ++){
@@ -26,5 +29,16 @@ public class ListNode {
 			}
 		}
 		return root;
+	}
+
+	public static String print(ListNode node){
+		ListNode temp = node;
+		StringBuilder sb = new StringBuilder();
+		while(temp != null){
+			sb.append(temp.val);
+			sb.append("->");
+			temp = temp.next;
+		}
+		return sb.toString();
 	}
 }
